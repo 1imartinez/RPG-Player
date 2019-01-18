@@ -57,6 +57,26 @@ let physical = {
       //no self damage
       return this.stats.atk+bonus;
     }
+  },
+  furyStrike:function(){
+
+    let basedamage = this.stats.atk;
+    let bonus = this.stats.atk*Math.random(); 
+    let pain = Math.random();   
+
+    if(pain < 0.50){
+      this.stats.hp = this.stats.hp - (basedamage + bonus)/2;
+      return basedamage+bonus;
+    }
+    else{
+      //no self damage
+      return basedamage+bonus;
+    }
+  },
+  roundhouseKick: function(){
+    let baseDamage = this.stats.atk;
+    let bonus = 0.5*this.stats.atk*Math.random();
+    if(){}
   }
 }
 
@@ -66,6 +86,7 @@ let magic = {
       this.stats.mp = this.stats.mp -8;
       let tetradice = Math.random();
       let pump = Math.ceil(this.stats.sp/3);
+
       if(tetradice < 0.10){
         return pump;
       }
@@ -79,7 +100,11 @@ let magic = {
         return 4*pump;
       }
     }
-  }
+  },
+  hyperBeam:function(){
+
+  },
+
 }
 
 
