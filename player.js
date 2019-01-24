@@ -36,7 +36,7 @@ let p1Moves = {
   },
   hyperBeam:function(){
     if(this.stats.mp >= 20){
-      this.stats.mp - this.stats.mp -20;
+      this.stats.mp - this.stats.mp - 20;
       let baseDamge = this.stats.sp
       let bonus = 1.5*this.stats.atk*Math.random();
       return baseDamge + bonus;
